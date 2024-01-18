@@ -12,7 +12,7 @@
 // Class definition for the main Test class
 class Test : public QObject
 {
-
+    Q_OBJECT
 public:
     // Constructor for Test class
     Test() :  masterDBus(nullptr), slaveDBus(nullptr), timer(this), counter(0) {
