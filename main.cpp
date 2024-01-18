@@ -3,16 +3,17 @@
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusConnectionInterface>
 #include <QtDBus/QDBusServiceWatcher>
-#include <servicenameandproperty.h>
+#include <MasterSlaveDBus/servicenameandproperty.h>
+#include <MasterSlaveDBus/masterdbus.h>
 #include <QDebug>
-#include "slavedbus.h"
-#include "masterdbus.h"
+#include "MasterSlaveDBus/slavedbus.h"
 #include <QTimer>
+
 
 // Class definition for the main Test class
 class Test : public QObject
 {
-    Q_OBJECT
+
 public:
     // Constructor for Test class
     Test() :  masterDBus(nullptr), slaveDBus(nullptr), timer(this), counter(0) {
